@@ -3,6 +3,6 @@ RUN apt update && apt -y install gettext-base
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-EXPOSE $PORT
+EXPOSE 8080
 RUN chmod +x run.sh
 CMD ["./run.sh"]
